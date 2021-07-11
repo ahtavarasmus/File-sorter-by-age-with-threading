@@ -24,7 +24,7 @@ def movingTheFile(start, end):
         month = datetimeObj.strftime('%B')  # month = march
 
         filename = os.path.basename(og_path)
-        newPath = 'D:\\sortedtest1\\{}\\{}'.format(year, month)
+        newPath = 'D:\\name-of-your-new-folder\\{}\\{}'.format(year, month)
 
         Path(newPath).mkdir(parents=True, exist_ok=True)  # windowsPath object
 
@@ -34,7 +34,7 @@ def movingTheFile(start, end):
 
 
 filenamelist = []  # list of all the filenames in a drive
-for foldername, subfolders, filenames in os.walk('D:\\videot\\random'):
+for foldername, subfolders, filenames in os.walk('C:\\path\\to\\folder\\you\\want\\to\\sort'):
     for filename in filenames:
         full_path = os.path.join(foldername, filename)
         filenamelist.append(full_path)
